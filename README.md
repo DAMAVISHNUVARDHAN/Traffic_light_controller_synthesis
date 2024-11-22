@@ -11,6 +11,34 @@ Functional Simulation: Incisive Simulator (ncvlog, ncelab, ncsim)
 Synthesis: Genus
 
 
+### Step 1: Getting Started
+
+Synthesis requires three files as follows,
+
+◦ Liberty Files (.lib)
+
+◦ Verilog/VHDL Files (.v or .vhdl or .vhd)
+
+### Step 2 : Creating an SDC File
+
+•	In your terminal type “gedit input_constraints.sdc” to create an SDC File if you do not have one.
+
+### Step 3 : Performing Synthesis
+
+The Liberty files are present in the library path,
+
+• The Available technology nodes are 180nm ,90nm and 45nm.
+
+• In the terminal, initialise the tools with the following commands if a new terminal is being used.
+
+◦ csh
+
+◦ source /cadence/install/cshrc
+
+• The tool used for Synthesis is “Genus”. Hence, type “genus -gui” to open the tool.
+
+• Genus Script file with .tcl file Extension commands are executed one by one to synthesize the netlist.
+
 ## traffic_light_controller_code
 
 `timescale 1 ns / 1 ps
@@ -174,42 +202,15 @@ end
 endmodule
 
 
-### Step 1: Getting Started
 
-Synthesis requires three files as follows,
+## Synthesis RTL Schematic :
 
-◦ Liberty Files (.lib)
-
-◦ Verilog/VHDL Files (.v or .vhdl or .vhd)
-
-### Step 2 : Creating an SDC File
-
-•	In your terminal type “gedit input_constraints.sdc” to create an SDC File if you do not have one.
-
-### Step 3 : Performing Synthesis
-
-The Liberty files are present in the library path,
-
-• The Available technology nodes are 180nm ,90nm and 45nm.
-
-• In the terminal, initialise the tools with the following commands if a new terminal is being used.
-
-◦ csh
-
-◦ source /cadence/install/cshrc
-
-• The tool used for Synthesis is “Genus”. Hence, type “genus -gui” to open the tool.
-
-• Genus Script file with .tcl file Extension commands are executed one by one to synthesize the netlist.
-
-Synthesis RTL Schematic :
-
-Area report:
+## Area report:
 ![Screenshot 2024-11-16 171242](https://github.com/user-attachments/assets/5a7db9a5-2e92-4c12-bc13-d7cee5599899)
 
-Power Report:
+## Power Report:
 ![Screenshot 2024-11-16 171259](https://github.com/user-attachments/assets/4108e60e-8953-494c-8913-dbc2f74f17e6)
 
-Result:
+## Result:
 
 The generic netlist of Traffic Light Controller has been created, and area, power reports have been tabulated and generated using Genus.
